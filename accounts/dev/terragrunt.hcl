@@ -1,8 +1,14 @@
+locals {
+  name = "dev"
+}
+
 terraform {
-  source =
-    "../../modules/accounts"
+  source = "../../modules/accounts"
 }
+
 inputs = {
-  instance_count = 10
-  instance_type  = "m4.large"
+      name      = local.name
+      email     = "philusky+aws-${local.name}@gmail.com"
+      role_name = "adminAssumeRole"
 }
+
