@@ -1,7 +1,10 @@
-### ORGANIZATION
-# After the AWS docs: "An entity that you create to consolidate your AWS accounts so that you can administer them as a single unit."
-module "root" {
- source               = "./organizations"
- enabled_policy_types = ["SERVICE_CONTROL_POLICY"]
+locals {
+ role_name = "adminAssumeRole"
 }
-### ORGANIZATION - END
+module "account-dev" {
+ source    = "modules/accounts"
+ name      = "account-dev"
+ email     = "YOUR_EMAIL+account-dev@YOUR_DOMAIN.TLD"
+ parent_id = module.ou-1.id
+ role_name = "adminAssumeRole"
+}

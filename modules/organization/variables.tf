@@ -10,5 +10,5 @@ variable "aws_service_access_principals" {
 variable "enabled_policy_types" {
  description = "After the Terraform docs: 'List of Organizations policy types to enable in the Organization Root. Organization must have feature_set set to ALL. For additional information about valid policy types (e.g. SERVICE_CONTROL_POLICY and TAG_POLICY), see the AWS Organizations API Reference.'"
  type        = list(string)
- default     = null
+ default     = ["SERVICE_CONTROL_POLICY"]
 }
