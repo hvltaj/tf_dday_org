@@ -10,5 +10,6 @@ resource "aws_organizations_account" "account" {
 }
 
 terraform {
-  backend "local" {}
+  backend "local" {
+  }
 }
