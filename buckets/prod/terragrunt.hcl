@@ -1,5 +1,5 @@
 locals {
-  name = "dev"
+  name = "prod"
 }
 
 inputs = {
