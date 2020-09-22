@@ -1,5 +1,5 @@
 locals {
-  name = "prod"
+  name = "dev"
 }
 
 inputs = {
@@ -19,7 +19,7 @@ remote_state {
 }
 
 dependency "account" {
-  config_path = "/home/hultaj/dday/tf_dday_org/accounts/${local.name}"
+  config_path = "/home/hultaj/dday/tf_dday_org/terragrunt/accounts/${local.name}"
 }
 
 iam_role = "arn:aws:iam::${dependency.account.outputs.id}:role/adminAssumeRole"

@@ -1,5 +1,5 @@
 module "org" {
-  source = "../modules/organization"
+  source = "..\/..\/modules\/organization"
 }
 
 output "roots" {

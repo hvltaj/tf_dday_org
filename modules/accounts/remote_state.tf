@@ -3,6 +3,6 @@ data "terraform_remote_state" "org" {
 
   config = {
     # change absolute path
-    path = "/home/hultaj/dday/tf_dday_org/organization/terraform.tfstate"
+    path = "/home/hultaj/dday/tf_dday_org/terragrunt/organization/terraform.tfstate"
   }
 }
